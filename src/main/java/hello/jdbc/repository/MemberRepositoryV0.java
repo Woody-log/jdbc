@@ -7,7 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.sql.*;
 
 /**
- *  JDBC - DriverManager 사용
+ * JDBC - DriverManager 사용
  */
 
 @Slf4j
@@ -35,7 +35,7 @@ public class MemberRepositoryV0 {
     }
 
     private void close(Connection con, Statement stmt, ResultSet rs) {
-        if(rs != null) {
+        if (rs != null) {
             try {
                 rs.close();
             } catch (SQLException e) {
@@ -43,7 +43,7 @@ public class MemberRepositoryV0 {
             }
         }
 
-        if(stmt != null) {
+        if (stmt != null) {
             try {
                 stmt.close();
             } catch (SQLException e) {
@@ -51,7 +51,7 @@ public class MemberRepositoryV0 {
             }
         }
 
-        if(con != null) {
+        if (con != null) {
             try {
                 con.close();
             } catch (SQLException e) {
