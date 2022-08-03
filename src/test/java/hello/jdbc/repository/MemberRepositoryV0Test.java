@@ -2,13 +2,13 @@ package hello.jdbc.repository;
 
 import hello.jdbc.domain.Member;
 import lombok.extern.slf4j.Slf4j;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.sql.SQLException;
 import java.util.NoSuchElementException;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 @Slf4j
 class MemberRepositoryV0Test {
@@ -33,7 +33,7 @@ class MemberRepositoryV0Test {
 
         // delete
         repository.delete(member.getMemberId());
-        Assertions.assertThatThrownBy(() -> repository.findById(member.getMemberId()))
+        assertThatThrownBy(() -> repository.findById(member.getMemberId()))
                 .isInstanceOf(NoSuchElementException.class);
     }
 }
