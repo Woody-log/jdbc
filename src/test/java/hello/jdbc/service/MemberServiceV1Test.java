@@ -14,6 +14,9 @@ import java.sql.SQLException;
 import static hello.jdbc.connection.ConnectionConst.*;
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * 기본 동작, 트랜잭션 없어서 문제 발생
+ */
 class MemberServiceV1Test {
 
     public static final String MEMBER_A = "memberA";
