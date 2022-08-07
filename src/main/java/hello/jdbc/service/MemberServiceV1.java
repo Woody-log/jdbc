@@ -20,8 +20,8 @@ public class MemberServiceV1 {
         memberRepository.update(toId, toMember.getMoney() + money);
     }
 
-    private void validation(Member toMembmer) {
-        if (toMembmer.getMemberId().equals("ex")) {
+    private void validation(Member toMember) {
+        if (toMember.getMemberId().equals("ex")) {
             throw new IllegalArgumentException("이체중 예외 발생");
         }
     }
